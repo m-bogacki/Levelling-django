@@ -1,11 +1,17 @@
 from rest_framework.serializers import ModelSerializer, CharField
-from .models import User, Address
+from .models import User, Address, Progress
 
 
 class AddressSerializer(ModelSerializer):
     class Meta:
         model = Address
         exclude = ["id"]
+
+
+class ProgressSerializer(ModelSerializer):
+    class Meta:
+        model = Progress
+        fields = ["level", "experience"]
 
 
 class UserListSerializer(ModelSerializer):
@@ -22,6 +28,7 @@ class UserListSerializer(ModelSerializer):
             "phone_number",
             "role",
             "address",
+            "progress",
         ]
 
 
