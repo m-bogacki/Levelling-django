@@ -30,7 +30,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-LOCAL_APPS = ["api", "account"]
+LOCAL_APPS = ["api", "account", "tasks"]
 
 INSTALLED_APPS = [
     "django.contrib.admin",

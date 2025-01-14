@@ -1,5 +1,4 @@
 from django.urls import path, include
-from .views import UserListCreateView
 from drf_spectacular.views import SpectacularSwaggerView, SpectacularAPIView
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
@@ -18,6 +17,7 @@ jwt_urlpatterns = [
 urlpatterns = (
     [
         path("users/", include("account.urls")),
+        path("tasks/", include("tasks.urls")),
     ]
     + swagger_urlpatterns
     + jwt_urlpatterns
